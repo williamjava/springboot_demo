@@ -1,0 +1,14 @@
+<body>
+  
+  <table>
+     #foreach($each in $stuList)
+     <tr>
+        <td>$each.id</td>
+        <td>$each.name</td>
+     </tr>
+     
+    #end
+  </table>
+  
+     
+</body>

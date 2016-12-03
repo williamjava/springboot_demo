@@ -1,0 +1,4 @@
+<h3>Hello JiHeZhiZao!</h3>
+<a href="stuList">View Student List</a>
+<a href="exception">Test Exception</a>
+<a href="file">Test FileUpload</a>

@@ -1,0 +1,37 @@
+##配置数据库的连接信息
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverclassname: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/jhzz
+        username: root
+        password: root
+        initialSize: 2
+        minIdle: 2
+        maxActive: 10
+        
+##配置数据库映射文件的路径，统一存放     
+
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+
+##用来测试普通的属性值注入
+
+language: java
+version: 1.8 
+
+grant_type: client_credential
+appid: wx26f7956eb5b33c5f
+secret:  f52d4351aa6ea166262361e363476ccb
+
+##增加日志支持，这种配置方法最为简单，提供了一些最核心基础的功能，以slf4j为具体实现，比较好用
+##这里为了测试方便，就指定了本机的目录，可以自由配置
+##如果对日志功能要求较多，那么建议使用springboot+logback的方式，提供更多功能
+
+logging:
+    file: E:/info/simpleArchiApp.log
+    
+    level: 
+        org:
+            springframework:
+                web: INFO
