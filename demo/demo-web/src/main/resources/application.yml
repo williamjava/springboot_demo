@@ -3,9 +3,9 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverclassname: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/jhzz
+        url: jdbc:mysql://localhost:3306/xuankuan
         username: root
-        password: root
+        password: 123456
         initialSize: 2
         minIdle: 2
         maxActive: 10

@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author wuhoujian
  */
 @Controller
-public class DefaultController {
+@RequestMapping("/user")
+public class UserController {
 
-	@RequestMapping("/")
-	public String index(ModelMap map) {
-		return "login";
+	@RequestMapping("/login")
+	public String login(ModelMap map) {
+		return "index";
 	}
 }

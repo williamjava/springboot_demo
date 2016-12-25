@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jhzz.demo.dal.mapper.CustomerMapperExt" >
+  <select id="selectByPage" resultMap="com.jhzz.demo.dal.mapper.CustomerMapper.BaseResultMap">
+		select id , name, category
+			from customer
+				where deleted = 0
+				order by updated_at desc
+				<if test="offset != null">
+					limit #{offset},#{limit}
+				</if>
+	</select>
+	
+	<select id="selectCountByPage" resultType="java.lang.Integer">
+		select count(1)
+			from customer
+				where deleted = 0
+	</select>
+  
+</mapper>
